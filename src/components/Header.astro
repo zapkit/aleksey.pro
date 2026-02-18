@@ -1,0 +1,114 @@
+<header class="fixed top-0 z-50 w-full bg-neutral-100/80 backdrop-blur-2xl">
+  <div class="container flex items-center justify-between py-4">
+    <div class="flex items-center gap-x-2">
+      <a class="font-medium" href="/">Алексей</a>
+      <span class="mb-0.5 font-bold">|</span>
+      <span>веб-разработчик</span>
+    </div>
+
+    <nav class="hidden items-center gap-6 font-medium md:flex">
+      <a class="hover:opacity-70" href="#project">Кейс</a>
+      <a class="hover:opacity-70" href="#process">Когда</a>
+      <a class="hover:opacity-70" href="#pricing">Цены</a>
+      <a href="#contacts" class="bg-neutral-900 px-4 py-2 text-neutral-100">Контакты</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden" aria-label="Открыть меню" type="button">
+      <svg
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M4 6h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobileMenu"
+    class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-300"
+  >
+    <div id="menuOverlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+    <aside
+      id="menuPanel"
+      class="absolute top-0 right-0 h-screen w-screen translate-x-full overflow-y-auto bg-neutral-100 p-6 shadow-2xl transition-transform duration-300"
+    >
+      <div class="mb-8 flex items-center justify-between">
+        <span class="font-semibold">Меню</span>
+        <button id="closeMenu" aria-label="Закрыть меню" type="button">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6L6 18"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-6 text-lg font-medium">
+        <a class="mobile-link" href="#project">Кейс</a>
+        <a class="mobile-link" href="#process">Когда нужен</a>
+        <a class="mobile-link" href="#pricing">Цены</a>
+        <a class="mobile-link border-2 border-neutral-900 px-4 py-3 text-center" href="#contacts">
+          Контакты
+        </a>
+      </nav>
+    </aside>
+  </div>
+
+  <script is:inline>
+    const qs = (s) => document.querySelector(s);
+    const qsa = (s) => Array.from(document.querySelectorAll(s));
+
+    const menuBtn = qs("#menuBtn");
+    const mobileMenu = qs("#mobileMenu");
+    const menuPanel = qs("#menuPanel");
+    const closeBtn = qs("#closeMenu");
+    const overlay = qs("#menuOverlay");
+    const links = () => qsa(".mobile-link");
+
+    const lockScroll = () => {
+      document.documentElement.style.overflow = "hidden";
+    };
+    const unlockScroll = () => {
+      document.documentElement.style.overflow = "";
+    };
+
+    const openMenu = () => {
+      if (!mobileMenu || !menuPanel) return;
+      mobileMenu.classList.remove("pointer-events-none", "opacity-0");
+      menuPanel.classList.remove("translate-x-full");
+      lockScroll();
+    };
+
+    const closeMenu = () => {
+      if (!mobileMenu || !menuPanel) return;
+      mobileMenu.classList.add("opacity-0");
+      menuPanel.classList.add("translate-x-full");
+      unlockScroll();
+      window.setTimeout(() => mobileMenu.classList.add("pointer-events-none"), 300);
+    };
+
+    const onEsc = (e) => {
+      if (e.key === "Escape") closeMenu();
+    };
+
+    menuBtn?.addEventListener("click", openMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
+    links().forEach((a) => a.addEventListener("click", closeMenu));
+    window.addEventListener("keydown", onEsc);
+  </script>
+</header>

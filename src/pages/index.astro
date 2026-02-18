@@ -1,0 +1,205 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pricing = [
+  {
+    title: "Лендинг",
+    price: "от 10 000 ₽",
+    description:
+      "Одностраничный сайт для услуги или запуска рекламы. Адаптивный, быстро открывается на телефоне, с простой CMS для редактирования, базовым SEO и корректной индексацией.",
+  },
+  {
+    title: "Сайт для бизнеса",
+    price: "от 50 000 ₽",
+    description:
+      "Полноценный сайт компании с удобной CMS, возможностью добавлять страницы и подключать нужные интеграции, включая всё из лендинга: мобильную адаптацию, скорость и SEO-настройку.",
+  },
+  {
+    title: "Кастомный проект",
+    price: "от 100 000 ₽",
+    description:
+      "Сервисы, личные кабинеты и нестандартные задачи с индивидуальной логикой, включая всё из лендинга и сайта для бизнеса: CMS, интеграции, адаптивность и оптимизацию скорости.",
+  },
+];
+---
+
+<Layout>
+  <section id="hero">
+    <div class="container flex min-h-screen items-center gap-x-4">
+      <div class="flex-1/10 space-y-3">
+        <h1 class="text-6xl font-black text-neutral-950">Сайты для бизнеса</h1>
+        <p class="text-lg text-neutral-700">
+          Делаю понятные и&nbsp;быстрые сайты, которые удобно открываются с&nbsp;телефона.
+          Посетитель быстро разбирается и&nbsp;оставляет заявку.
+        </p>
+        <div class="flex items-center space-x-3">
+          <a
+            class="bg-neutral-900 px-4 py-3 font-medium text-neutral-100 hover:bg-neutral-700"
+            href="#contacts"
+          >
+            Написать
+          </a>
+          <a
+            class="px-4 py-3 font-medium hover:bg-neutral-900 hover:text-neutral-100"
+            href="#project"
+          >
+            Пример
+          </a>
+        </div>
+      </div>
+      <div class="hidden flex-1 md:flex">
+        <img class="grayscale" src="/me.webp" alt="Моя фотография" />
+      </div>
+    </div>
+  </section>
+  <section id="project">
+    <div class="container space-y-5 py-24 md:py-32">
+      <h2 class="text-5xl font-black text-neutral-950">Кейс</h2>
+      <div class="space-y-4 border-2 p-4">
+        <div class="flex flex-col-reverse justify-between gap-1 sm:flex-row sm:items-center">
+          <h3 class="text-3xl font-bold text-neutral-950">Pugovka Booster</h3>
+          <span class="text-sm text-neutral-700">
+            Клиент:
+            <a
+              class="underline hover:text-neutral-950"
+              href="https://www.youtube.com/@%D0%94%D0%B5%D0%BD%D0%B8%D1%81%D0%9F%D1%83%D0%B3%D0%BE%D0%B2%D0%BA%D0%B8%D0%BD"
+              target="_blank"
+              rel="noopener">блогер Пуговкин</a
+            >
+          </span>
+        </div>
+        <div class="space-y-2">
+          <p>
+            <strong>Проблема:</strong>
+            у проекта была страница на Tilda: выглядела устаревшей и плохо работала на телефонах.
+          </p>
+          <p>
+            <strong>Что я сделал:</strong>
+            переработал сайт - обновил структуру, интерфейс и сделал быструю загрузку.
+          </p>
+          <div class="border-2 p-3">
+            <p>
+              <strong>Результат:</strong>
+              сайт используется в рекламе, видео и стал основной страницей проекта.
+            </p>
+            <span class="font-medium">Открывается за 1 секунду даже на мобильном интернете.</span>
+          </div>
+        </div>
+        <a
+          class="font-medium text-neutral-950 underline hover:text-neutral-700"
+          href="https://pugovkabooster.com"
+          target="_blank"
+          rel="noopener">Открыть сайт</a
+        >
+      </div>
+    </div>
+  </section>
+  <section id="process">
+    <div class="container space-y-5 py-24 md:py-32">
+      <h2 class="text-5xl font-black text-neutral-950">Когда нужен я?</h2>
+      <div class="space-y-4 border-2 p-4">
+        <ul class="list-inside list-disc space-y-1 font-medium">
+          <li>Нужен сайт с нуля для бизнеса или проекта</li>
+          <li>Стыдно отправлять ссылку на сайт клиентам</li>
+          <li>Сайт долго открывается на телефоне</li>
+          <li>Есть только Instagram или Telegram, но нужна нормальная страница</li>
+        </ul>
+        <div class="border-2 p-3">
+          <strong>Что в итоге:</strong>
+          делаю быстрый и понятный сайт, на котором человек сразу понимает услуги и пишет вам.
+        </div>
+        <a
+          href="#contacts"
+          class="flex items-center gap-x-1 font-medium text-neutral-950 underline hover:text-neutral-700"
+        >
+          Обсудить проект
+          <svg
+            class="mt-0.5 size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="pricing">
+    <div class="container space-y-5 py-24 md:py-32">
+      <h2 class="text-5xl font-black text-neutral-950">Цены</h2>
+      <div class="grid gap-4 md:grid-cols-3">
+        {
+          pricing.map((plan) => (
+            <div class="flex flex-col justify-between space-y-3 border-2 p-4">
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold">{plan.title}</h3>
+                <p class="text-2xl font-bold text-neutral-950">{plan.price}</p>
+                <p class="text-sm text-neutral-700">{plan.description}</p>
+              </div>
+              <a
+                href="#contacts"
+                class="flex items-center gap-x-1 font-medium underline hover:text-neutral-700"
+              >
+                Обсудить
+                <svg
+                  class="mt-0.5 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+      <p class="text-sm text-neutral-700">
+        Точную стоимость называю после короткого обсуждения задачи.
+      </p>
+    </div>
+  </section>
+  <section id="contacts">
+    <div
+      class="mx-auto flex min-h-screen max-w-2xl flex-col justify-center space-y-5 px-4 py-24 md:py-32"
+    >
+      <h2 class="text-5xl font-black">Контакты</h2>
+      <div class="space-y-3 border-2 p-4">
+        <p class="text-lg font-medium">
+          Напишите пару слов о&nbsp;задаче и&nbsp;сроках&nbsp;&mdash; я посмотрю и&nbsp;подскажу,
+          что можно сделать.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a
+            href="https://t.me/aleksey_web"
+            target="_blank"
+            rel="noopener"
+            class="border-2 px-5 py-3 text-center font-medium hover:bg-neutral-900 hover:text-neutral-100"
+          >
+            Написать в Telegram
+          </a>
+          <a
+            href="https://wa.me/79952702833"
+            target="_blank"
+            rel="noopener"
+            class="border-2 px-5 py-3 text-center font-medium hover:bg-neutral-900 hover:text-neutral-100"
+          >
+            Написать в WhatsApp
+          </a>
+        </div>
+        <p class="text-sm text-neutral-700">Консультация бесплатная. Отвечаю в течения дня.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
