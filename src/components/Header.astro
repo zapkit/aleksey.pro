@@ -1,16 +1,25 @@
 <header class="fixed top-0 z-50 w-full bg-neutral-100/80 backdrop-blur-2xl">
   <div class="container flex items-center justify-between py-4">
     <div class="flex items-center gap-x-2">
-      <a class="font-medium" href="/">Алексей</a>
-      <span class="mb-0.5 font-bold">|</span>
+      <a class="font-medium transition-colors duration-300 hover:text-neutral-700" href="/">
+        Алексей
+      </a>
+      <span class="font-bold">|</span>
       <span>веб-разработчик</span>
     </div>
 
     <nav class="hidden items-center gap-6 font-medium md:flex">
-      <a class="hover:opacity-70" href="#project">Кейс</a>
-      <a class="hover:opacity-70" href="#process">Когда</a>
-      <a class="hover:opacity-70" href="#pricing">Цены</a>
-      <a href="#contacts" class="bg-neutral-900 px-4 py-2 text-neutral-100">Контакты</a>
+      <a class="transition-colors duration-300 hover:text-neutral-700" href="#project">Кейс</a>
+      <a class="transition-colors duration-300 hover:text-neutral-700" href="#process"
+        >Когда нужен я?</a
+      >
+      <a class="transition-colors duration-300 hover:text-neutral-700" href="#pricing">Цены</a>
+      <a
+        href="#contacts"
+        class="bg-neutral-900 px-4 py-2 text-neutral-100 transition-colors duration-300 hover:bg-neutral-700"
+      >
+        Контакты
+      </a>
     </nav>
 
     <button id="menuBtn" class="md:hidden" aria-label="Открыть меню" type="button">
@@ -58,10 +67,22 @@
       </div>
 
       <nav class="flex flex-col gap-6 text-lg font-medium">
-        <a class="mobile-link" href="#project">Кейс</a>
-        <a class="mobile-link" href="#process">Когда нужен</a>
-        <a class="mobile-link" href="#pricing">Цены</a>
-        <a class="mobile-link border-2 border-neutral-900 px-4 py-3 text-center" href="#contacts">
+        <a
+          class="mobile-link transition-colors duration-300 active:text-neutral-700"
+          href="#project">Кейс</a
+        >
+        <a
+          class="mobile-link transition-colors duration-300 active:text-neutral-700"
+          href="#process">Когда нужен я?</a
+        >
+        <a
+          class="mobile-link transition-colors duration-300 active:text-neutral-700"
+          href="#pricing">Цены</a
+        >
+        <a
+          class="mobile-link border-2 border-neutral-900 px-4 py-3 text-center transition-all duration-300 active:bg-neutral-900 active:text-neutral-100"
+          href="#contacts"
+        >
           Контакты
         </a>
       </nav>

@@ -4,19 +4,19 @@ import Layout from "../layouts/Layout.astro";
 const pricing = [
   {
     title: "Лендинг",
-    price: "от 10 000 ₽",
+    price: "10 000 ₽",
     description:
       "Одностраничный сайт для услуги или запуска рекламы. Адаптивный, быстро открывается на телефоне, с простой CMS для редактирования, базовым SEO и корректной индексацией.",
   },
   {
     title: "Сайт для бизнеса",
-    price: "от 50 000 ₽",
+    price: "50 000 ₽",
     description:
       "Полноценный сайт компании с удобной CMS, возможностью добавлять страницы и подключать нужные интеграции, включая всё из лендинга: мобильную адаптацию, скорость и SEO-настройку.",
   },
   {
     title: "Кастомный проект",
-    price: "от 100 000 ₽",
+    price: "100 000 ₽",
     description:
       "Сервисы, личные кабинеты и нестандартные задачи с индивидуальной логикой, включая всё из лендинга и сайта для бизнеса: CMS, интеграции, адаптивность и оптимизацию скорости.",
   },
@@ -27,20 +27,22 @@ const pricing = [
   <section id="hero">
     <div class="container flex min-h-screen items-center gap-x-4">
       <div class="flex-1/10 space-y-3">
-        <h1 class="text-6xl font-black text-neutral-950">Сайты для бизнеса</h1>
+        <h1 class="text-6xl font-black text-neutral-950 md:text-7xl xl:text-8xl">
+          Сайты для бизнеса
+        </h1>
         <p class="text-lg text-neutral-700">
           Делаю понятные и&nbsp;быстрые сайты, которые удобно открываются с&nbsp;телефона.
           Посетитель быстро разбирается и&nbsp;оставляет заявку.
         </p>
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center gap-x-3 text-lg">
           <a
-            class="bg-neutral-900 px-4 py-3 font-medium text-neutral-100 hover:bg-neutral-700"
+            class="bg-neutral-900 px-4 py-3 font-medium text-neutral-100 transition-colors duration-300 hover:bg-neutral-700 active:bg-neutral-700"
             href="#contacts"
           >
             Написать
           </a>
           <a
-            class="px-4 py-3 font-medium hover:bg-neutral-900 hover:text-neutral-100"
+            class="px-4 py-3 font-medium transition-colors duration-300 hover:bg-neutral-900 hover:text-neutral-100 active:border-neutral-900 active:bg-neutral-900 active:text-neutral-100"
             href="#project"
           >
             Пример
@@ -61,7 +63,7 @@ const pricing = [
           <span class="text-sm text-neutral-700">
             Клиент:
             <a
-              class="underline hover:text-neutral-950"
+              class="underline transition-colors duration-300 hover:text-neutral-950 active:text-neutral-950"
               href="https://www.youtube.com/@%D0%94%D0%B5%D0%BD%D0%B8%D1%81%D0%9F%D1%83%D0%B3%D0%BE%D0%B2%D0%BA%D0%B8%D0%BD"
               target="_blank"
               rel="noopener">блогер Пуговкин</a
@@ -86,7 +88,7 @@ const pricing = [
           </div>
         </div>
         <a
-          class="font-medium text-neutral-950 underline hover:text-neutral-700"
+          class="font-bold text-neutral-950 underline transition-colors duration-300 hover:text-neutral-700 active:text-neutral-700"
           href="https://pugovkabooster.com"
           target="_blank"
           rel="noopener">Открыть сайт</a
@@ -110,7 +112,7 @@ const pricing = [
         </div>
         <a
           href="#contacts"
-          class="flex items-center gap-x-1 font-medium text-neutral-950 underline hover:text-neutral-700"
+          class="flex items-center gap-x-1 font-bold text-neutral-950 underline transition-colors duration-300 hover:text-neutral-700 active:text-neutral-700"
         >
           Обсудить проект
           <svg
@@ -144,7 +146,7 @@ const pricing = [
               </div>
               <a
                 href="#contacts"
-                class="flex items-center gap-x-1 font-medium underline hover:text-neutral-700"
+                class="flex items-center gap-x-1 font-bold underline transition-colors duration-300 hover:text-neutral-700 active:text-neutral-700"
               >
                 Обсудить
                 <svg
@@ -165,9 +167,9 @@ const pricing = [
           ))
         }
       </div>
-      <p class="text-sm text-neutral-700">
+      <!-- <p class="text-sm text-neutral-700">
         Точную стоимость называю после короткого обсуждения задачи.
-      </p>
+      </p> -->
     </div>
   </section>
   <section id="contacts">
@@ -185,7 +187,7 @@ const pricing = [
             href="https://t.me/aleksey_web"
             target="_blank"
             rel="noopener"
-            class="border-2 px-5 py-3 text-center font-medium hover:bg-neutral-900 hover:text-neutral-100"
+            class="border-2 px-5 py-3 text-center font-medium transition-colors duration-300 hover:border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 active:border-neutral-900 active:bg-neutral-900 active:text-neutral-100"
           >
             Написать в Telegram
           </a>
@@ -193,7 +195,7 @@ const pricing = [
             href="https://wa.me/79952702833"
             target="_blank"
             rel="noopener"
-            class="border-2 px-5 py-3 text-center font-medium hover:bg-neutral-900 hover:text-neutral-100"
+            class="border-2 px-5 py-3 text-center font-medium transition-colors duration-300 hover:border-neutral-900 hover:bg-neutral-900 hover:text-neutral-100 active:border-neutral-900 active:bg-neutral-900 active:text-neutral-100"
           >
             Написать в WhatsApp
           </a>

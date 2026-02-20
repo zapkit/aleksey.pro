@@ -2,6 +2,15 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+
+const {
+  title = "Алексей | веб-разработчик: разработка современных лендингов и сайтов для бизнесов",
+  description = "Создаю быстрые и современные сайты и лендинги для бизнеса: рост заявок, высокая скорость загрузки и SEO-оптимизация. Полный цикл — от идеи до запуска.",
+  image = "/me.webp",
+  url = "https://www.aleksey.pro/",
+  dark_favicon = "/dark-favicon.svg",
+  light_favicon = "/light-favicon.svg",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -9,10 +18,25 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={image} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+
+    <link rel="icon" href={light_favicon} media="(prefers-color-scheme: light)" />
+    <link rel="icon" href={dark_favicon} media="(prefers-color-scheme: dark)" />
   </head>
   <body>
     <Header />
