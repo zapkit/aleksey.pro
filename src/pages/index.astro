@@ -28,7 +28,7 @@ const pricing = [
     <div class="container flex min-h-screen items-center gap-x-4">
       <div class="flex-1/10 space-y-3">
         <h1 class="text-6xl font-black text-neutral-950 md:text-7xl xl:text-8xl">
-          Сайты для бизнеса
+          Сайты для <span class="text-green-500">бизнеса</span>
         </h1>
         <p class="text-lg text-neutral-700">
           Делаю понятные и&nbsp;быстрые сайты, которые удобно открываются с&nbsp;телефона.
@@ -36,13 +36,13 @@ const pricing = [
         </p>
         <div class="flex items-center gap-x-3 text-lg">
           <a
-            class="bg-neutral-900 px-4 py-3 font-medium text-neutral-100 transition-colors duration-300 hover:bg-neutral-700 active:bg-neutral-700"
+            class="bg-neutral-900 px-5 py-3 font-medium text-neutral-100 transition-colors duration-300 hover:bg-neutral-700 active:bg-neutral-700"
             href="#contacts"
           >
             Написать
           </a>
           <a
-            class="px-4 py-3 font-medium transition-colors duration-300 hover:bg-neutral-900 hover:text-neutral-100 active:border-neutral-900 active:bg-neutral-900 active:text-neutral-100"
+            class="px-5 py-3 font-medium transition-colors duration-300 hover:bg-neutral-900 hover:text-neutral-100 active:border-neutral-900 active:bg-neutral-900 active:text-neutral-100"
             href="#project"
           >
             Пример
@@ -50,7 +50,11 @@ const pricing = [
         </div>
       </div>
       <div class="hidden flex-1 md:flex">
-        <img class="grayscale" src="/me.webp" alt="Моя фотография" />
+        <img
+          class="grayscale transition-all duration-300 hover:grayscale-0"
+          src="/me.webp"
+          alt="Моя фотография"
+        />
       </div>
     </div>
   </section>
@@ -108,7 +112,8 @@ const pricing = [
         </ul>
         <div class="border-2 p-3">
           <strong>Что в итоге:</strong>
-          делаю быстрый и понятный сайт, на котором человек сразу понимает услуги и пишет вам.
+          делаю быстрый и понятный сайт, на котором человек сразу понимает услугу и покупает или записывается
+          к вам.
         </div>
         <a
           href="#contacts"
