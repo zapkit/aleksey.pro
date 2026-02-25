@@ -30,6 +30,7 @@
 
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-primary: oklch(72.3% 0.219 149.579);
 }
 
 html {
@@ -37,7 +38,7 @@ html {
 }
 
 body {
-  @apply bg-neutral-100 text-neutral-900;
+  @apply bg-neutral-900 text-neutral-100;
 }
 
 .container {

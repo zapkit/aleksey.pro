@@ -1,22 +1,22 @@
-<header class="fixed top-0 z-50 w-full bg-neutral-100/80 backdrop-blur-2xl">
+<header class="fixed top-0 z-50 w-full bg-neutral-900/80 backdrop-blur-2xl">
   <div class="container flex items-center justify-between py-4">
     <div class="flex items-center gap-x-2">
-      <a class="font-medium transition-colors duration-300 hover:text-neutral-700" href="/">
+      <a class="font-medium transition-colors duration-300 hover:text-neutral-400" href="#hero">
         Алексей
       </a>
-      <span class="font-medium text-green-500">|</span>
+      <span class="text-primary font-medium">|</span>
       <span>веб-разработчик</span>
     </div>
 
     <nav class="hidden items-center gap-6 font-medium md:flex">
-      <a class="transition-colors duration-300 hover:text-neutral-700" href="#project">Кейс</a>
-      <a class="transition-colors duration-300 hover:text-neutral-700" href="#process">
+      <a class="transition-colors duration-300 hover:text-neutral-400" href="#project">Кейс</a>
+      <a class="transition-colors duration-300 hover:text-neutral-400" href="#process">
         Когда нужен я?
       </a>
-      <a class="transition-colors duration-300 hover:text-neutral-700" href="#pricing">Цены</a>
+      <a class="transition-colors duration-300 hover:text-neutral-400" href="#pricing">Цены</a>
       <a
         href="#contacts"
-        class="bg-neutral-900 px-4 py-2 text-neutral-100 transition-colors duration-300 hover:bg-neutral-700"
+        class="bg-neutral-100 px-4 py-2 text-neutral-900 transition-colors duration-300 hover:bg-neutral-300"
       >
         Контакты
       </a>
@@ -38,7 +38,6 @@
     </button>
   </div>
 
-  <!-- Mobile menu -->
   <div
     id="mobileMenu"
     class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-300"
@@ -47,7 +46,7 @@
 
     <aside
       id="menuPanel"
-      class="absolute top-0 right-0 h-screen w-screen translate-x-full overflow-y-auto bg-neutral-100 p-6 shadow-2xl transition-transform duration-300"
+      class="absolute top-0 right-0 h-screen w-screen translate-x-full overflow-y-auto bg-neutral-900 p-6 shadow-2xl transition-transform duration-300"
     >
       <div class="mb-8 flex items-center justify-between">
         <span class="font-bold">Меню</span>
@@ -65,22 +64,21 @@
           </svg>
         </button>
       </div>
-
-      <nav class="flex flex-col gap-6 text-lg font-medium">
+      <nav class="flex flex-col justify-between gap-6 text-lg font-medium">
         <a
-          class="mobile-link transition-colors duration-300 active:text-neutral-700"
+          class="mobile-link transition-colors duration-300 active:text-neutral-300"
           href="#project">Кейс</a
         >
         <a
-          class="mobile-link transition-colors duration-300 active:text-neutral-700"
+          class="mobile-link transition-colors duration-300 active:text-neutral-300"
           href="#process">Когда нужен я?</a
         >
         <a
-          class="mobile-link transition-colors duration-300 active:text-neutral-700"
+          class="mobile-link transition-colors duration-300 active:text-neutral-300"
           href="#pricing">Цены</a
         >
         <a
-          class="mobile-link border-2 border-neutral-900 px-4 py-3 text-center transition-all duration-300 active:bg-neutral-900 active:text-neutral-100"
+          class="mobile-link absolute right-6 bottom-6 left-6 border-2 border-neutral-100 px-4 py-3 text-center transition-all duration-300 active:bg-neutral-100 active:text-neutral-900"
           href="#contacts"
         >
           Контакты
