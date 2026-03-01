@@ -1,56 +1,78 @@
-<header class="fixed top-0 z-50 w-full bg-neutral-900/80 backdrop-blur-2xl">
-  <div class="container flex items-center justify-between py-4">
-    <div class="flex items-center gap-x-2">
-      <a class="font-medium transition-colors duration-300 hover:text-neutral-400" href="#hero">
-        Алексей
+<header id="siteHeader" class="fixed top-0 z-50 w-full transition-all duration-300">
+  <div class="mx-auto max-w-7xl px-4">
+    <div
+      id="headerInner"
+      class="mt-4 flex items-center justify-between rounded-xl border border-neutral-100/5 bg-neutral-900/70 p-4 backdrop-blur-xl transition-all duration-300"
+    >
+      <a href="/" class="flex items-center gap-2 font-semibold text-neutral-100">
+        <span class="text-lg transition-colors duration-300 hover:text-neutral-400">Aleksey</span>
+        <span class="text-primary">•</span>
+        <span class="text-neutral-400">Web Developer</span>
       </a>
-      <span class="text-primary font-medium">|</span>
-      <span>веб-разработчик</span>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-neutral-300 md:flex">
+        <a class="nav-link transition-colors duration-300 hover:text-neutral-100" href="#project">
+          Project
+        </a>
+        <a class="nav-link transition-colors duration-300 hover:text-neutral-100" href="#problems">
+          Is this you?
+        </a>
+        <a class="nav-link transition-colors duration-300 hover:text-neutral-100" href="#pricing">
+          Pricing
+        </a>
+        <a
+          href="#contacts"
+          class="bg-primary ml-2 rounded-md px-4 py-2 font-semibold text-neutral-900 transition duration-300 hover:brightness-110"
+        >
+          Contact
+        </a>
+      </nav>
+      <button
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-controls="menuPanel"
+        aria-expanded="false"
+        class="cursor-pointer text-neutral-100 transition-colors duration-300 hover:text-neutral-400 md:hidden"
+      >
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M4 6h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 18h16"></path>
+        </svg>
+      </button>
     </div>
-
-    <nav class="hidden items-center gap-6 font-medium md:flex">
-      <a class="transition-colors duration-300 hover:text-neutral-400" href="#project">Кейс</a>
-      <a class="transition-colors duration-300 hover:text-neutral-400" href="#process">
-        Когда нужен я?
-      </a>
-      <a class="transition-colors duration-300 hover:text-neutral-400" href="#pricing">Цены</a>
-      <a
-        href="#contacts"
-        class="bg-neutral-100 px-4 py-2 text-neutral-900 transition-colors duration-300 hover:bg-neutral-300"
-      >
-        Контакты
-      </a>
-    </nav>
-
-    <button id="menuBtn" class="md:hidden" aria-label="Открыть меню" type="button">
-      <svg
-        width="26"
-        height="26"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path d="M4 6h16"></path>
-        <path d="M4 12h16"></path>
-        <path d="M4 18h16"></path>
-      </svg>
-    </button>
   </div>
 
   <div
     id="mobileMenu"
     class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-300"
   >
-    <div id="menuOverlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-
-    <aside
+    <div
+      id="menuOverlay"
+      aria-hidden="true"
+      class="absolute inset-0 bg-neutral-900/90 backdrop-blur-sm"
+    >
+    </div>
+    <div
       id="menuPanel"
-      class="absolute top-0 right-0 h-screen w-screen translate-x-full overflow-y-auto bg-neutral-900 p-6 shadow-2xl transition-transform duration-300"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mobileMenuTitle"
+      class="absolute top-0 right-0 h-screen w-full translate-x-full p-8 transition-transform duration-300"
     >
       <div class="mb-8 flex items-center justify-between">
-        <span class="font-bold">Меню</span>
-        <button id="closeMenu" aria-label="Закрыть меню" type="button">
+        <h2 id="mobileMenuTitle" class="text-lg font-semibold text-neutral-100">Menu</h2>
+        <button
+          id="closeMenu"
+          aria-label="Close menu"
+          class="cursor-pointer text-neutral-100 transition-colors duration-300 active:text-neutral-300"
+        >
           <svg
             width="26"
             height="26"
@@ -64,70 +86,89 @@
           </svg>
         </button>
       </div>
-      <nav class="flex flex-col justify-between gap-6 text-lg font-medium">
+      <nav class="flex flex-col gap-6 text-lg font-medium text-neutral-300">
         <a
-          class="mobile-link transition-colors duration-300 active:text-neutral-300"
-          href="#project">Кейс</a
+          class="mobile-link transition-colors duration-300 active:text-neutral-100"
+          href="#project">Project</a
         >
         <a
-          class="mobile-link transition-colors duration-300 active:text-neutral-300"
-          href="#process">Когда нужен я?</a
+          class="mobile-link transition-colors duration-300 active:text-neutral-100"
+          href="#problems">Is this you?</a
         >
         <a
-          class="mobile-link transition-colors duration-300 active:text-neutral-300"
-          href="#pricing">Цены</a
+          class="mobile-link transition-colors duration-300 active:text-neutral-100"
+          href="#pricing">Pricing</a
         >
         <a
-          class="mobile-link absolute right-6 bottom-6 left-6 border-2 border-neutral-100 px-4 py-3 text-center transition-all duration-300 active:bg-neutral-100 active:text-neutral-900"
           href="#contacts"
+          class="bg-primary mobile-link absolute right-8 bottom-8 left-8 rounded-md px-5 py-3 text-center font-semibold text-neutral-900 transition-all duration-300 active:brightness-110"
         >
-          Контакты
+          Contact me
         </a>
       </nav>
-    </aside>
+    </div>
   </div>
 
   <script is:inline>
     const qs = (s) => document.querySelector(s);
-    const qsa = (s) => Array.from(document.querySelectorAll(s));
-
     const menuBtn = qs("#menuBtn");
     const mobileMenu = qs("#mobileMenu");
     const menuPanel = qs("#menuPanel");
     const closeBtn = qs("#closeMenu");
     const overlay = qs("#menuOverlay");
-    const links = () => qsa(".mobile-link");
+    let lastFocused = null;
+    const focusableSelectors =
+      'a[href],button:not([disabled]),textarea,input,select,[tabindex]:not([tabindex="-1"])';
+    const getFocusable = () => [...menuPanel.querySelectorAll(focusableSelectors)];
 
-    const lockScroll = () => {
-      document.documentElement.style.overflow = "hidden";
-    };
-    const unlockScroll = () => {
-      document.documentElement.style.overflow = "";
-    };
-
-    const openMenu = () => {
-      if (!mobileMenu || !menuPanel) return;
-      mobileMenu.classList.remove("pointer-events-none", "opacity-0");
-      menuPanel.classList.remove("translate-x-full");
-      lockScroll();
-    };
-
-    const closeMenu = () => {
-      if (!mobileMenu || !menuPanel) return;
-      mobileMenu.classList.add("opacity-0");
-      menuPanel.classList.add("translate-x-full");
-      unlockScroll();
-      window.setTimeout(() => mobileMenu.classList.add("pointer-events-none"), 300);
+    const trapTab = (e) => {
+      if (e.key !== "Tab") return;
+      const focusable = getFocusable();
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
 
     const onEsc = (e) => {
       if (e.key === "Escape") closeMenu();
     };
 
-    menuBtn?.addEventListener("click", openMenu);
-    closeBtn?.addEventListener("click", closeMenu);
-    overlay?.addEventListener("click", closeMenu);
-    links().forEach((a) => a.addEventListener("click", closeMenu));
-    window.addEventListener("keydown", onEsc);
+    const openMenu = () => {
+      lastFocused = document.activeElement;
+      mobileMenu.classList.remove("pointer-events-none", "opacity-0");
+      menuPanel.classList.remove("translate-x-full");
+      menuBtn.setAttribute("aria-expanded", "true");
+      document.documentElement.style.overflow = "hidden";
+      setTimeout(() => closeBtn.focus(), 50);
+      document.addEventListener("keydown", trapTab);
+      document.addEventListener("keydown", onEsc);
+    };
+
+    const closeMenu = () => {
+      mobileMenu.classList.add("opacity-0");
+      menuPanel.classList.add("translate-x-full");
+      menuBtn.setAttribute("aria-expanded", "false");
+      document.documentElement.style.overflow = "";
+      document.removeEventListener("keydown", trapTab);
+      document.removeEventListener("keydown", onEsc);
+      setTimeout(() => {
+        mobileMenu.classList.add("pointer-events-none");
+        lastFocused?.focus();
+      }, 300);
+    };
+
+    menuBtn.addEventListener("click", openMenu);
+    closeBtn.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
+    document
+      .querySelectorAll(".mobile-link")
+      .forEach((l) => l.addEventListener("click", closeMenu));
   </script>
 </header>

@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import miyabi from "../../assets/miyabi.webp";
+---
+
+<section id="project" class="relative py-28">
+  <div class="container space-y-6">
+    <div class="max-w-3xl">
+      <h2 class="text-5xl font-black">Selected project</h2>
+      <p class="mt-3 text-neutral-400">
+        Example of a real business website redesign with performance optimization and improved
+        usability.
+      </p>
+    </div>
+
+    <div class="grid items-center gap-8 lg:grid-cols-2">
+      <div class="animate-float relative">
+        <a
+          class="flex cursor-pointer items-center justify-center overflow-hidden"
+          href="https://pugovkabooster.com"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            src={miyabi}
+            alt="Pugovka Booster website preview"
+            widths={[320, 480, 768, 1024]}
+            sizes="(max-width: 1024px) 90vw, 384px"
+            class="object-contain grayscale sm:max-w-96 lg:h-full"
+            format="webp"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      </div>
+
+      <div class="space-y-6">
+        <div class="flex flex-col flex-wrap justify-between gap-4">
+          <div
+            class="flex w-full flex-col-reverse flex-wrap justify-between gap-2 sm:flex-row sm:items-center"
+          >
+            <h3 class="text-3xl font-bold">Pugovka Booster</h3>
+            <a
+              href="https://www.youtube.com/@%D0%94%D0%B5%D0%BD%D0%B8%D1%81%D0%9F%D1%83%D0%B3%D0%BE%D0%B2%D0%BA%D0%B8%D0%BD"
+              target="_blank"
+              rel="noopener"
+              class="text-sm text-neutral-400 underline underline-offset-4"
+            >
+              blogger Pugovkin
+            </a>
+          </div>
+          <div class="rounded-xl border border-neutral-100/5 bg-neutral-900/40 p-5">
+            <p class="text-neutral-300">
+              <span class="font-semibold">Problem:</span>
+              the previous Tilda landing page looked outdated, loaded slowly and was difficult to use
+              on mobile devices.
+            </p>
+          </div>
+          <div class="rounded-xl border border-neutral-100/5 bg-neutral-900/40 p-5">
+            <p class="text-neutral-300">
+              <span class="font-semibold">What I did:</span>
+              redesigned the structure and interface, improved readability and optimized performance for
+              fast loading on all devices.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div
+              class="flex flex-col items-center justify-center rounded-xl border border-neutral-100/5 bg-neutral-900/70 p-5 text-center"
+            >
+              <p class="text-primary text-2xl font-bold">~1s</p>
+              <p class="text-neutral-30 text-sm">page load time</p>
+            </div>
+            <div
+              class="flex flex-col items-center justify-center rounded-xl border border-neutral-100/5 bg-neutral-900/70 p-5 text-center"
+            >
+              <p class="text-primary text-2xl font-bold">Mobile optimized</p>
+              <p class="text-neutral-30 text-sm">comfortable navigation</p>
+            </div>
+          </div>
+          <a
+            class="bg-primary inline-block rounded-md px-6 py-3 text-center font-semibold text-black transition duration-300 hover:brightness-110 active:brightness-110"
+            href="https://pugovkabooster.com"
+            target="_blank"
+            rel="noopener"
+          >
+            Open website
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

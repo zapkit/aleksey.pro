@@ -4,8 +4,8 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 const {
-  title = "Алексей | веб-разработчик: разработка современных лендингов и сайтов для бизнесов",
-  description = "Создаю быстрые и современные сайты и лендинги для бизнеса: рост заявок, высокая скорость загрузки и SEO-оптимизация. Полный цикл — от идеи до запуска.",
+  title = "Aleksey • Web Developer | High-Performance Business Websites & Landing Pages",
+  description = "I build fast, modern business websites and landing pages that increase leads and conversions. Performance-optimized, SEO-friendly, and fully managed — from idea to launch.",
   image = "/me.webp",
   url = "https://www.aleksey.pro/",
   dark_favicon = "/dark-favicon.svg",
@@ -14,29 +14,33 @@ const {
 ---
 
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={url} />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={url} />
     <meta property="og:image" content={image} />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
-    <meta name="generator" content={Astro.generator} />
 
+    <!-- Favicons -->
     <link rel="icon" href={light_favicon} media="(prefers-color-scheme: light)" />
     <link rel="icon" href={dark_favicon} media="(prefers-color-scheme: dark)" />
+
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body>
     <Header />

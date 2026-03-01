@@ -31,6 +31,80 @@
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --color-primary: oklch(72.3% 0.219 149.579);
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-speedUp: speedUp 3s cubic-bezier(0.25, 0.9, 0.2, 1) forwards;
+  --animate-fadeIn: fadeIn 3s forwards;
+  --animate-fadeOut: fadeOut 3s forwards;
+  --animate-uiFlow: uiFlow 4s ease-in-out infinite;
+}
+
+@layer utilities {
+  [data-animate] * {
+    animation-play-state: paused !important;
+  }
+
+  [data-animate].is-visible * {
+    animation-play-state: running !important;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes speedUp {
+  0% {
+    stroke-dashoffset: 339;
+  }
+  60% {
+    stroke-dashoffset: 260;
+  }
+  100% {
+    stroke-dashoffset: 40;
+  }
+}
+
+@keyframes fadeIn {
+  0%,
+  60% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0%,
+  55% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes uiFlow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-28px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 html {
@@ -43,4 +117,17 @@ body {
 
 .container {
   @apply mx-auto max-w-7xl px-4;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(161, 161, 161, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(161, 161, 161, 0.2) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: 50px 20px;
+}
+
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(42, 51, 70, 0.4) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
