@@ -19,6 +19,18 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Preload CSS -->
+    <link rel="preload" href="/_astro/index.B7oaW0R6.css" as="style" />
+
+    <!-- Critical font (LCP) -->
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-cyrillic_latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={url} />
